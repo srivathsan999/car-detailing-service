@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - AutoShine Car Detailing</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -17,7 +21,7 @@
                     </div>
                     <span class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                 </a>
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home 2</a>
                     <a href="services.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Services</a>
@@ -28,13 +32,13 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     <button class="theme-toggle neomorphic" data-theme-toggle><span data-theme-icon></span></button>
-                    <a href="dashboard/index.html" class="btn btn-outline hidden md:inline-flex">Dashboard</a>
-                    <a href="pages/auth/login.html" class="btn btn-outline hidden md:inline-flex">Login</a>
-                    <a href="pages/auth/signup.html" class="btn btn-primary hidden md:inline-flex">Sign Up</a>
-                    <button class="md:hidden p-2" data-mobile-menu-toggle><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden lg:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden lg:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden lg:inline-flex">Sign Up</a>
+                    <button class="lg:hidden p-2" data-mobile-menu-toggle><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
                 </div>
             </div>
-            <div class="hidden md:hidden mt-4 pb-4" data-mobile-menu>
+            <div class="hidden lg:block mt-4 pb-4" data-mobile-menu>
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
@@ -58,58 +62,141 @@
                 <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Transparent pricing for premium car detailing services</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                 <!-- Basic Package -->
-                <div class="card">
+                <div class="card flex flex-col">
                     <h3 class="text-2xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--color-text-primary);">Basic</h3>
                     <div class="mb-6">
                         <span class="text-4xl font-bold" style="color: var(--color-accent);">$99</span>
                         <span style="color: var(--color-text-secondary);">/session</span>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Exterior wash & dry</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Tire & wheel cleaning</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Interior vacuum</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Dashboard wipe</span></li>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Exterior wash & dry</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Tire & wheel cleaning</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Interior vacuum</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Dashboard wipe</span></li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline w-full">Book Now</a>
+                    <a href="contact.html" class="btn btn-outline w-full mt-auto">Book Now</a>
                 </div>
 
                 <!-- Premium Package -->
-                <div class="card border-2" style="border-color: var(--color-accent);">
-                    <div class="bg-gradient-to-br from-cyan-400 to-cyan-600 text-white px-4 py-2 rounded-t-lg -mt-6 -mx-6 mb-6 text-center">
-                        <span class="font-semibold">Most Popular</span>
+                <div class="card flex flex-col border-2 relative" style="border-color: var(--color-accent);">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-gradient-to-br from-cyan-400 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            Most Popular
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--color-text-primary);">Premium</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold" style="color: var(--color-accent);">$249</span>
-                        <span style="color: var(--color-text-secondary);">/session</span>
+                    <div class="pt-4">
+                        <h3 class="text-2xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--color-text-primary);">Premium</h3>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold" style="color: var(--color-accent);">$249</span>
+                            <span style="color: var(--color-text-secondary);">/session</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Everything in Basic</span></li>
+                            <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Clay bar treatment</span></li>
+                            <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Wax application</span></li>
+                            <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Interior deep clean</span></li>
+                            <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Leather conditioning</span></li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full mt-auto">Book Now</a>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Everything in Basic</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Clay bar treatment</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Wax application</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Interior deep clean</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Leather conditioning</span></li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary w-full">Book Now</a>
                 </div>
 
                 <!-- Ultimate Package -->
-                <div class="card">
+                <div class="card flex flex-col">
                     <h3 class="text-2xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--color-text-primary);">Ultimate</h3>
                     <div class="mb-6">
                         <span class="text-4xl font-bold" style="color: var(--color-accent);">$599</span>
                         <span style="color: var(--color-text-secondary);">/session</span>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Everything in Premium</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Paint correction</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Ceramic coating</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Engine bay detail</span></li>
-                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Full interior restoration</span></li>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Everything in Premium</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Paint correction</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Ceramic coating</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Engine bay detail</span></li>
+                        <li class="flex items-start space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg><span style="color: var(--color-text-secondary);">Full interior restoration</span></li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline w-full">Book Now</a>
+                    <a href="contact.html" class="btn btn-outline w-full mt-auto">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4" style="background: var(--color-surface);">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--color-text-primary);">Frequently Asked Questions</h2>
+                <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-secondary);">
+                    Everything you need to know about our pricing and services
+                </p>
+            </div>
+            <div class="space-y-4">
+                <div class="card">
+                    <div class="faq-question cursor-pointer flex items-center justify-between py-4" style="color: var(--color-text-primary);">
+                        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">How long does a detailing session take?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 0;">
+                        <p class="pb-4" style="color: var(--color-text-secondary);">
+                            Basic packages typically take 2-3 hours, Premium packages take 4-5 hours, and Ultimate packages can take 6-8 hours depending on the vehicle size and condition.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="faq-question cursor-pointer flex items-center justify-between py-4" style="color: var(--color-text-primary);">
+                        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Do you offer mobile detailing services?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 0;">
+                        <p class="pb-4" style="color: var(--color-text-secondary);">
+                            Yes, we offer mobile detailing services for an additional fee. Our team will come to your location with all necessary equipment and supplies.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="faq-question cursor-pointer flex items-center justify-between py-4" style="color: var(--color-text-primary);">
+                        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">What payment methods do you accept?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 0;">
+                        <p class="pb-4" style="color: var(--color-text-secondary);">
+                            We accept cash, credit cards, debit cards, and digital payment methods like PayPal and Venmo. Payment is due upon completion of service.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="faq-question cursor-pointer flex items-center justify-between py-4" style="color: var(--color-text-primary);">
+                        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Is there a warranty on your services?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 0;">
+                        <p class="pb-4" style="color: var(--color-text-secondary);">
+                            Yes, our ceramic coating services come with a 5-year warranty. All other services are guaranteed for 30 days. We stand behind our work and will address any issues.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="faq-question cursor-pointer flex items-center justify-between py-4" style="color: var(--color-text-primary);">
+                        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Can I customize a package?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 0;">
+                        <p class="pb-4" style="color: var(--color-text-secondary);">
+                            Absolutely! We offer custom packages tailored to your specific needs. Contact us to discuss your requirements and we'll create a personalized quote.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,13 +252,44 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center" style="border-color: rgba(255, 255, 255, 0.1);">
-                <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2024 AutoShine. All rights reserved.</p>
+                <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2026 AutoShine. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('svg');
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    if (ans !== answer) {
+                        ans.style.maxHeight = '0px';
+                    }
+                });
+                document.querySelectorAll('.faq-question svg').forEach(svg => {
+                    if (svg !== icon) {
+                        svg.classList.remove('rotate-180');
+                    }
+                });
+
+                // Toggle current FAQ
+                if (isOpen) {
+                    answer.style.maxHeight = '0px';
+                    icon.classList.remove('rotate-180');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

@@ -6,6 +6,9 @@
     <title>AutoShine - Premium Car Detailing Services</title>
     <meta name="description" content="Professional car detailing services with premium quality. We bring your vehicle back to showroom condition.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -29,7 +32,7 @@
                     <span class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                 </a>
 
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home 2</a>
                     <a href="services.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Services</a>
@@ -43,11 +46,11 @@
                     <button class="theme-toggle neomorphic" data-theme-toggle>
                         <span data-theme-icon></span>
                     </button>
-                    <a href="dashboard/index.html" class="btn btn-outline hidden md:inline-flex">Dashboard</a>
-                    <a href="pages/auth/login.html" class="btn btn-outline hidden md:inline-flex">Login</a>
-                    <a href="pages/auth/signup.html" class="btn btn-primary hidden md:inline-flex">Sign Up</a>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden lg:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden lg:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden lg:inline-flex">Sign Up</a>
                     
-                    <button class="md:hidden p-2" data-mobile-menu-toggle>
+                    <button class="lg:hidden p-2" data-mobile-menu-toggle>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);">
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -57,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="hidden md:hidden mt-4 pb-4" data-mobile-menu>
+            <div class="hidden lg:block mt-4 pb-4" data-mobile-menu>
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
@@ -77,10 +80,10 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-24 px-4 overflow-hidden">
         <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50" style="background: linear-gradient(135deg, rgba(236, 254, 255, 0.5) 0%, rgba(240, 249, 255, 0.5) 50%, rgba(239, 246, 255, 0.5) 100%);"></div>
-        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-8 left-20 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50 hero-bg" style="background: linear-gradient(135deg, rgba(236, 254, 255, 0.5) 0%, rgba(240, 249, 255, 0.5) 50%, rgba(239, 246, 255, 0.5) 100%);"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob hero-blob-1"></div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000 hero-blob-2"></div>
+        <div class="absolute -bottom-8 left-20 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000 hero-blob-3"></div>
         
         <div class="container mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -89,10 +92,10 @@
                     <div class="inline-block mb-4 px-4 py-2 rounded-full glass" style="background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.2);">
                         <span class="text-sm font-semibold" style="color: var(--color-accent);">✨ Premium Detailing Services</span>
                     </div>
-                    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight" style="font-family: var(--font-heading); color: var(--color-text-primary);">
+                    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight hero-heading" style="font-family: var(--font-heading); color: var(--color-text-primary);">
                         Transform Your <span class="text-gradient">Vehicle</span> to Perfection
                     </h1>
-                    <p class="text-xl mb-8 leading-relaxed" style="color: var(--color-text-secondary);">
+                    <p class="text-xl mb-8 leading-relaxed hero-description" style="color: var(--color-text-secondary);">
                         Professional car detailing services that bring your vehicle back to showroom condition. From exterior wash to ceramic coating, we deliver excellence.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-12">
@@ -545,7 +548,7 @@
             </div>
 
             <div class="border-t border-gray-800 mt-8 pt-8 text-center" style="border-color: rgba(255, 255, 255, 0.1);">
-                <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2024 AutoShine. All rights reserved.</p>
+                <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2026 AutoShine. All rights reserved.</p>
             </div>
         </div>
     </footer>

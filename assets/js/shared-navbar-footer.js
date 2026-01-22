@@ -99,7 +99,7 @@ const SharedComponents = {
                         </div>
                     </div>
                     <div class="border-t border-gray-800 mt-8 pt-8 text-center" style="border-color: var(--color-border);">
-                        <p style="color: var(--color-text-secondary);">&copy; 2024 AutoShine. All rights reserved.</p>
+                        <p style="color: var(--color-text-secondary);">&copy; 2026 AutoShine. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
