@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Package Manager - AutoShine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body style="background: var(--color-surface);">
+    <!-- Dashboard Header -->
+    <header class="sticky top-0 z-50 glass border-b" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-color: var(--color-border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
+                    </a>
+                    <span class="text-gray-400 hidden md:block">|</span>
+                    <h1 class="text-2xl font-bold hidden md:block" style="font-family: var(--font-heading); color: var(--color-text-primary);">Service Package Manager</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="theme-toggle neomorphic" data-theme-toggle>
+                        <span data-theme-icon></span>
+                    </button>
+                    <a href="index.html" class="btn btn-outline text-sm">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+        <!-- Header Actions -->
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-3xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--color-text-primary);">Service Packages</h2>
+                <p class="text-sm" style="color: var(--color-text-secondary);">Manage your service packages and pricing</p>
+            </div>
+            <button id="addPackageBtn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add New Package
+            </button>
+        </div>
+
+        <!-- Packages Grid -->
+        <div id="packagesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Packages will be loaded here -->
+        </div>
+
+        <!-- Package Management Modal -->
+        <div id="packageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="backdrop-filter: blur(4px);">
+            <div class="card glass max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);" id="modalTitle">Add New Package</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="packageForm" class="space-y-6">
+                    <input type="hidden" id="packageId">
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--color-text-primary);">Package Name *</label>
+                        <input type="text" id="packageName" required class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-cyan-500 focus:border-transparent" style="background: var(--color-white); border-color: var(--color-border); color: var(--color-text-primary);" placeholder="e.g., Premium Detail">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2" style="color: var(--color-text-primary);">Price ($) *</label>
+                            <input type="number" id="packagePrice" required min="0" step="0.01" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-cyan-500 focus:border-transparent" style="background: var(--color-white); border-color: var(--color-border); color: var(--color-text-primary);" placeholder="299.00">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2" style="color: var(--color-text-primary);">Duration *</label>
+                            <input type="text" id="packageDuration" required class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-cyan-500 focus:border-transparent" style="background: var(--color-white); border-color: var(--color-border); color: var(--color-text-primary);" placeholder="4-5 hours">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--color-text-primary);">Description *</label>
+                        <textarea id="packageDescription" required rows="4" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-cyan-500 focus:border-transparent" style="background: var(--color-white); border-color: var(--color-border); color: var(--color-text-primary);" placeholder="Describe what's included in this package..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--color-text-primary);">Features (one per line)</label>
+                        <textarea id="packageFeatures" rows="6" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-cyan-500 focus:border-transparent" style="background: var(--color-white); border-color: var(--color-border); color: var(--color-text-primary);" placeholder="Exterior wash and wax&#10;Interior vacuum and cleaning&#10;Tire shine"></textarea>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="packageActive" class="w-5 h-5 rounded border-gray-300 text-cyan-600 focus:ring-cyan-500">
+                            <span class="text-sm font-medium" style="color: var(--color-text-primary);">Active (visible to customers)</span>
+                        </label>
+                    </div>
+
+                    <div class="flex space-x-4 pt-4">
+                        <button type="submit" class="btn btn-primary flex-1">Save Package</button>
+                        <button type="button" id="cancelBtn" class="btn btn-outline flex-1">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/theme.js"></script>
+    <script>
+        // Sample packages data (in real app, this would come from an API)
+        let packages = [
+            {
+                id: 1,
+                name: 'Basic Wash',
+                price: 49,
+                duration: '1 hour',
+                description: 'Exterior wash and dry',
+                features: ['Exterior wash', 'Tire cleaning', 'Quick dry'],
+                active: true
+            },
+            {
+                id: 2,
+                name: 'Standard Detail',
+                price: 149,
+                duration: '2-3 hours',
+                description: 'Exterior wash, interior vacuum, and basic cleaning',
+                features: ['Exterior wash', 'Interior vacuum', 'Dashboard cleaning', 'Tire shine'],
+                active: true
+            },
+            {
+                id: 3,
+                name: 'Premium Detail',
+                price: 299,
+                duration: '4-5 hours',
+                description: 'Full exterior and interior detailing with wax',
+                features: ['Full exterior wash', 'Wax application', 'Interior deep clean', 'Leather conditioning', 'Tire shine'],
+                active: true
+            },
+            {
+                id: 4,
+                name: 'Ceramic Coating',
+                price: 599,
+                duration: '6-8 hours',
+                description: 'Paint correction and ceramic coating application',
+                features: ['Paint correction', 'Ceramic coating', '5-year warranty', 'Interior detail'],
+                active: true
+            },
+            {
+                id: 5,
+                name: 'Full Service',
+                price: 799,
+                duration: '8-10 hours',
+                description: 'Complete detailing with ceramic coating and interior deep clean',
+                features: ['Full paint correction', 'Ceramic coating', 'Interior deep clean', 'Engine bay cleaning', '5-year warranty'],
+                active: true
+            }
+        ];
+
+        // Load packages on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPackages();
+            setupEventListeners();
+        });
+
+        function loadPackages() {
+            const grid = document.getElementById('packagesGrid');
+            grid.innerHTML = '';
+
+            packages.forEach(pkg => {
+                const card = createPackageCard(pkg);
+                grid.appendChild(card);
+            });
+        }
+
+        function createPackageCard(pkg) {
+            const div = document.createElement('div');
+            div.className = 'card glass';
+            div.dataset.packageId = pkg.id;
+            
+            const featuresList = pkg.features ? pkg.features.map(f => `<li class="text-sm" style="color: var(--color-text-secondary);">${f}</li>`).join('') : '';
+            
+            div.innerHTML = `
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <h3 class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">${pkg.name}</h3>
+                            ${pkg.active ? '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Active</span>' : '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Inactive</span>'}
+                        </div>
+                        <p class="text-sm mb-3" style="color: var(--color-text-secondary);">${pkg.description}</p>
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div>
+                                <span class="text-xs" style="color: var(--color-text-secondary);">Price:</span>
+                                <span class="text-lg font-bold ml-1" style="color: var(--color-accent);">$${pkg.price}</span>
+                            </div>
+                            <div>
+                                <span class="text-xs" style="color: var(--color-text-secondary);">Duration:</span>
+                                <span class="text-sm font-medium ml-1" style="color: var(--color-text-primary);">${pkg.duration}</span>
+                            </div>
+                        </div>
+                        ${featuresList ? `<ul class="list-disc list-inside space-y-1 mb-4">${featuresList}</ul>` : ''}
+                    </div>
+                </div>
+                <div class="flex space-x-2 pt-4 border-t" style="border-color: var(--color-border);">
+                    <button class="edit-package btn btn-outline flex-1 text-sm" data-id="${pkg.id}">Edit</button>
+                    <button class="delete-package btn btn-outline flex-1 text-sm text-red-600 hover:bg-red-50" data-id="${pkg.id}">Delete</button>
+                </div>
+            `;
+            
+            return div;
+        }
+
+        function setupEventListeners() {
+            // Add package button
+            document.getElementById('addPackageBtn').addEventListener('click', function() {
+                openModal();
+            });
+
+            // Close modal
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            document.getElementById('cancelBtn').addEventListener('click', closeModal);
+            document.getElementById('packageModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+
+            // Form submission
+            document.getElementById('packageForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                savePackage();
+            });
+
+            // Edit and delete buttons (delegated)
+            document.getElementById('packagesGrid').addEventListener('click', function(e) {
+                if (e.target.classList.contains('edit-package')) {
+                    const id = parseInt(e.target.dataset.id);
+                    editPackage(id);
+                } else if (e.target.classList.contains('delete-package')) {
+                    const id = parseInt(e.target.dataset.id);
+                    deletePackage(id);
+                }
+            });
+        }
+
+        function openModal(packageId = null) {
+            const modal = document.getElementById('packageModal');
+            const form = document.getElementById('packageForm');
+            const title = document.getElementById('modalTitle');
+            
+            if (packageId) {
+                title.textContent = 'Edit Package';
+                const pkg = packages.find(p => p.id === packageId);
+                if (pkg) {
+                    document.getElementById('packageId').value = pkg.id;
+                    document.getElementById('packageName').value = pkg.name;
+                    document.getElementById('packagePrice').value = pkg.price;
+                    document.getElementById('packageDuration').value = pkg.duration;
+                    document.getElementById('packageDescription').value = pkg.description;
+                    document.getElementById('packageFeatures').value = pkg.features ? pkg.features.join('\n') : '';
+                    document.getElementById('packageActive').checked = pkg.active;
+                }
+            } else {
+                title.textContent = 'Add New Package';
+                form.reset();
+                document.getElementById('packageId').value = '';
+                document.getElementById('packageActive').checked = true;
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('packageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('packageForm').reset();
+        }
+
+        function savePackage() {
+            const id = document.getElementById('packageId').value;
+            const name = document.getElementById('packageName').value;
+            const price = parseFloat(document.getElementById('packagePrice').value);
+            const duration = document.getElementById('packageDuration').value;
+            const description = document.getElementById('packageDescription').value;
+            const features = document.getElementById('packageFeatures').value.split('\n').filter(f => f.trim());
+            const active = document.getElementById('packageActive').checked;
+
+            if (id) {
+                // Update existing package
+                const index = packages.findIndex(p => p.id === parseInt(id));
+                if (index !== -1) {
+                    packages[index] = { ...packages[index], name, price, duration, description, features, active };
+                }
+            } else {
+                // Add new package
+                const newId = packages.length > 0 ? Math.max(...packages.map(p => p.id)) + 1 : 1;
+                packages.push({ id: newId, name, price, duration, description, features, active });
+            }
+
+            loadPackages();
+            closeModal();
+            
+            // Show success message
+            alert('Package saved successfully!');
+        }
+
+        function editPackage(id) {
+            openModal(id);
+        }
+
+        function deletePackage(id) {
+            if (confirm('Are you sure you want to delete this package?')) {
+                packages = packages.filter(p => p.id !== id);
+                loadPackages();
+                alert('Package deleted successfully!');
+            }
+        }
+    </script>
+</body>
+</html>
+

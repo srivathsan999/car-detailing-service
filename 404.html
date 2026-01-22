@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | AutoShine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background: var(--color-surface);">
+    <nav class="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+                    </div>
+                    <span class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home</a>
+                    <a href="home-2.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home 2</a>
+                    <a href="services.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Services</a>
+                    <a href="pricing.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Pricing</a>
+                    <a href="gallery.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Gallery</a>
+                    <a href="blog.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="theme-toggle neomorphic" data-theme-toggle><span data-theme-icon></span></button>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden md:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden md:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden md:inline-flex">Sign Up</a>
+                    <button class="md:hidden p-2" data-mobile-menu-toggle><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+                </div>
+            </div>
+            <div class="hidden md:hidden mt-4 pb-4" data-mobile-menu>
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
+                    <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
+                    <a href="services.html" class="font-medium" style="color: var(--color-text-primary);">Services</a>
+                    <a href="pricing.html" class="font-medium" style="color: var(--color-text-primary);">Pricing</a>
+                    <a href="gallery.html" class="font-medium" style="color: var(--color-text-primary);">Gallery</a>
+                    <a href="blog.html" class="font-medium" style="color: var(--color-text-primary);">Blog</a>
+                    <a href="contact.html" class="font-medium" style="color: var(--color-text-primary);">Contact</a>
+                    <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4 text-center">
+        <div class="container mx-auto">
+            <div class="text-9xl font-bold mb-4" style="color: var(--color-accent);">404</div>
+            <h1 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: var(--color-text-primary);">Page Not Found</h1>
+            <p class="text-lg mb-8 max-w-md mx-auto" style="color: var(--color-text-secondary);">The page you're looking for doesn't exist or has been moved.</p>
+            <a href="index.html" class="btn btn-primary">Go Home</a>
+        </div>
+    </section>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>
+
