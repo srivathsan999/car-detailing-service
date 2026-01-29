@@ -18,11 +18,11 @@
 <body style="background: var(--color-surface); overflow-x: hidden;">
     <!-- Dashboard Header -->
     <header class="sticky top-0 z-50 glass border-b"
-        style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-color: var(--color-border);">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition" id="sidebarToggle">
+        style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-color: var(--color-border); position: sticky; top: 0;">
+        <div class="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
+                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0" id="sidebarToggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="color: var(--color-text-primary);">
@@ -31,47 +31,55 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </button>
-                    <a href="../index.html" class="flex items-center space-x-2">
+                    <a href="../index.html" class="flex items-center space-x-2 flex-shrink-0">
                         <div
-                            class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                                stroke-linejoin="round" class="sm:w-6 sm:h-6">
                                 <path
                                     d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
                             </svg>
                         </div>
-                        <span class="text-xl font-bold"
+                        <span class="text-lg sm:text-xl font-bold truncate"
                             style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                     </a>
-                    <span class="text-gray-400 hidden md:block">|</span>
-                    <h1 class="text-2xl font-bold hidden md:block"
+                    <span class="text-gray-400 hidden md:block flex-shrink-0">|</span>
+                    <h1 class="text-lg sm:text-2xl font-bold hidden md:block truncate"
                         style="font-family: var(--font-heading); color: var(--color-text-primary);">Dashboard</h1>
                 </div>
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
                     <button class="theme-toggle neomorphic" data-theme-toggle>
                         <span data-theme-icon></span>
                     </button>
                     <div class="flex items-center space-x-2">
                         <div
-                            class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white font-bold">
+                            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                             AD</div>
-                        <span class="hidden md:block font-medium" style="color: var(--color-text-primary);">Admin</span>
+                        <span class="hidden md:block font-medium text-sm" style="color: var(--color-text-primary);">Admin</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="flex min-h-screen">
+    <div class="flex min-h-screen overflow-x-hidden">
         <!-- Sidebar Overlay -->
         <div class="fixed inset-0 bg-black/50 z-40 lg:hidden hidden" id="sidebarOverlay"></div>
 
         <!-- Sidebar -->
         <aside
-            class="w-64 glass border-r fixed lg:static inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block bg-white lg:bg-transparent"
-            id="sidebar" style="backdrop-filter: blur(20px); border-color: var(--color-border);">
-            <nav class="p-6 space-y-2">
+            class="w-64 glass border-r fixed lg:sticky lg:top-[72px] inset-y-0 left-0 z-40 lg:z-10 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block bg-white lg:bg-transparent lg:self-start"
+            id="sidebar" style="backdrop-filter: blur(20px); border-color: var(--color-border); top: 64px; height: calc(100vh - 64px);">
+            <style>
+                @media (min-width: 1024px) {
+                    #sidebar {
+                        top: 72px !important;
+                        height: calc(100vh - 72px) !important;
+                    }
+                }
+            </style>
+            <nav class="p-4 lg:p-6 space-y-2">
                 <a href="index.html"
                     class="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -131,9 +139,9 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-6 lg:p-8">
+        <main class="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-full overflow-x-hidden">
             <!-- Stats Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 <div class="card glass">
                     <div class="flex items-center justify-between">
                         <div>
@@ -217,7 +225,7 @@
             </div>
 
             <!-- Charts Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 <div class="card glass">
                     <h3 class="text-xl font-bold mb-4"
                         style="font-family: var(--font-heading); color: var(--color-text-primary);">Revenue Overview
@@ -243,58 +251,58 @@
                         style="font-family: var(--font-heading); color: var(--color-text-primary);">Recent Bookings</h3>
                     <a href="bookings.html" class="btn btn-outline text-sm">View All</a>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full">
+                <div class="overflow-x-auto -mx-4 sm:mx-0">
+                    <table class="w-full min-w-[640px]">
                         <thead>
                             <tr class="border-b" style="border-color: var(--color-border);">
-                                <th class="text-left py-3 px-4 font-semibold" style="color: var(--color-text-primary);">
+                                <th class="text-left py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">
                                     Customer</th>
-                                <th class="text-left py-3 px-4 font-semibold" style="color: var(--color-text-primary);">
+                                <th class="text-left py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">
                                     Service</th>
-                                <th class="text-left py-3 px-4 font-semibold" style="color: var(--color-text-primary);">
+                                <th class="text-left py-3 px-2 sm:px-4 font-semibold text-sm hidden sm:table-cell" style="color: var(--color-text-primary);">
                                     Date</th>
-                                <th class="text-left py-3 px-4 font-semibold" style="color: var(--color-text-primary);">
+                                <th class="text-left py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">
                                     Status</th>
-                                <th class="text-left py-3 px-4 font-semibold" style="color: var(--color-text-primary);">
+                                <th class="text-left py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">
                                     Amount</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-b hover:bg-gray-50 transition" style="border-color: var(--color-border);">
-                                <td class="py-3 px-4" style="color: var(--color-text-primary);">John Davis</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Full Service</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Jan 22, 2024</td>
-                                <td class="py-3 px-4"><span
-                                        class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Completed</span>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-primary);">John Davis</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-secondary);">Full Service</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm hidden sm:table-cell" style="color: var(--color-text-secondary);">Jan 22, 2024</td>
+                                <td class="py-3 px-2 sm:px-4"><span
+                                        class="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">Completed</span>
                                 </td>
-                                <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">$299</td>
+                                <td class="py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">$299</td>
                             </tr>
                             <tr class="border-b hover:bg-gray-50 transition" style="border-color: var(--color-border);">
-                                <td class="py-3 px-4" style="color: var(--color-text-primary);">Sarah Martinez</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Ceramic Coating</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Jan 21, 2024</td>
-                                <td class="py-3 px-4"><span
-                                        class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">In
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-primary);">Sarah Martinez</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-secondary);">Ceramic Coating</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm hidden sm:table-cell" style="color: var(--color-text-secondary);">Jan 21, 2024</td>
+                                <td class="py-3 px-2 sm:px-4"><span
+                                        class="px-2 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 whitespace-nowrap">In
                                         Progress</span></td>
-                                <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">$599</td>
+                                <td class="py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">$599</td>
                             </tr>
                             <tr class="border-b hover:bg-gray-50 transition" style="border-color: var(--color-border);">
-                                <td class="py-3 px-4" style="color: var(--color-text-primary);">Michael Wilson</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Interior Detail</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Jan 20, 2024</td>
-                                <td class="py-3 px-4"><span
-                                        class="px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700">Pending</span>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-primary);">Michael Wilson</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-secondary);">Interior Detail</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm hidden sm:table-cell" style="color: var(--color-text-secondary);">Jan 20, 2024</td>
+                                <td class="py-3 px-2 sm:px-4"><span
+                                        class="px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 whitespace-nowrap">Pending</span>
                                 </td>
-                                <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">$199</td>
+                                <td class="py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">$199</td>
                             </tr>
                             <tr class="border-b hover:bg-gray-50 transition" style="border-color: var(--color-border);">
-                                <td class="py-3 px-4" style="color: var(--color-text-primary);">Emily Johnson</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Paint Correction</td>
-                                <td class="py-3 px-4" style="color: var(--color-text-secondary);">Jan 19, 2024</td>
-                                <td class="py-3 px-4"><span
-                                        class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Completed</span>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-primary);">Emily Johnson</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm" style="color: var(--color-text-secondary);">Paint Correction</td>
+                                <td class="py-3 px-2 sm:px-4 text-sm hidden sm:table-cell" style="color: var(--color-text-secondary);">Jan 19, 2024</td>
+                                <td class="py-3 px-2 sm:px-4"><span
+                                        class="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">Completed</span>
                                 </td>
-                                <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">$449</td>
+                                <td class="py-3 px-2 sm:px-4 font-semibold text-sm" style="color: var(--color-text-primary);">$449</td>
                             </tr>
                         </tbody>
                     </table>

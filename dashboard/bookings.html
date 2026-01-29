@@ -18,10 +18,10 @@
     <!-- Dashboard Header -->
     <header class="sticky top-0 z-50 glass border-b"
         style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-color: var(--color-border);">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition" id="sidebarToggle">
+        <div class="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
+                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0" id="sidebarToggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="color: var(--color-text-primary);">
@@ -30,47 +30,55 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </button>
-                    <a href="../index.html" class="flex items-center space-x-2">
+                    <a href="../index.html" class="flex items-center space-x-2 flex-shrink-0">
                         <div
-                            class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                                stroke-linejoin="round" class="sm:w-6 sm:h-6">
                                 <path
                                     d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
                             </svg>
                         </div>
-                        <span class="text-xl font-bold"
+                        <span class="text-lg sm:text-xl font-bold truncate"
                             style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                     </a>
-                    <span class="text-gray-400 hidden md:block">|</span>
-                    <h1 class="text-2xl font-bold hidden md:block"
+                    <span class="text-gray-400 hidden md:block flex-shrink-0">|</span>
+                    <h1 class="text-lg sm:text-2xl font-bold hidden md:block truncate"
                         style="font-family: var(--font-heading); color: var(--color-text-primary);">Online Booking</h1>
                 </div>
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
                     <button class="theme-toggle neomorphic" data-theme-toggle>
                         <span data-theme-icon></span>
                     </button>
                     <div class="flex items-center space-x-2">
                         <div
-                            class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white font-bold">
+                            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                             AD</div>
-                        <span class="hidden md:block font-medium" style="color: var(--color-text-primary);">Admin</span>
+                        <span class="hidden md:block font-medium text-sm" style="color: var(--color-text-primary);">Admin</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="flex min-h-screen">
+    <div class="flex min-h-screen overflow-x-hidden lg:items-start">
         <!-- Sidebar Overlay -->
         <div class="fixed inset-0 bg-black/50 z-40 lg:hidden hidden" id="sidebarOverlay"></div>
 
         <!-- Sidebar -->
         <aside
-            class="w-64 glass border-r fixed lg:static inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block bg-white lg:bg-transparent"
-            id="sidebar" style="backdrop-filter: blur(20px); border-color: var(--color-border);">
-            <nav class="p-6 space-y-2">
+            class="w-64 glass border-r fixed lg:sticky lg:top-[72px] inset-y-0 left-0 z-40 lg:z-10 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block bg-white lg:bg-transparent lg:self-start"
+            id="sidebar" style="backdrop-filter: blur(20px); border-color: var(--color-border); top: 64px; height: calc(100vh - 64px);">
+            <style>
+                @media (min-width: 1024px) {
+                    #sidebar {
+                        top: 72px !important;
+                        height: calc(100vh - 72px) !important;
+                    }
+                }
+            </style>
+            <nav class="p-4 lg:p-6 space-y-2">
                 <a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition"
                     style="color: var(--color-text-primary);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -130,25 +138,25 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-6 lg:p-8 overflow-y-auto">
-            <div class="container mx-auto max-w-6xl">
-                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <main class="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto w-full max-w-full overflow-x-hidden">
+            <div class="container mx-auto max-w-6xl px-0">
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                     <!-- Booking Form -->
                     <div class="lg:col-span-2">
-                        <div class="card glass mb-6">
-                            <h2 class="text-2xl font-bold mb-6"
+                        <div class="card glass mb-4 sm:mb-6">
+                            <h2 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
                                 style="font-family: var(--font-heading); color: var(--color-text-primary);">Book Your
                                 Service
                             </h2>
 
-                            <form id="bookingForm" class="space-y-6">
+                            <form id="bookingForm" class="space-y-4 sm:space-y-6">
                                 <!-- Customer Information -->
                                 <div>
                                     <h3 class="text-lg font-semibold mb-4"
                                         style="font-family: var(--font-heading); color: var(--color-text-primary);">
                                         Customer
                                         Information</h3>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                                         <div>
                                             <label class="block text-sm font-medium mb-2"
                                                 style="color: var(--color-text-primary);">First Name *</label>
@@ -186,7 +194,7 @@
                                         style="font-family: var(--font-heading); color: var(--color-text-primary);">
                                         Vehicle
                                         Information</h3>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                                         <div>
                                             <label class="block text-sm font-medium mb-2"
                                                 style="color: var(--color-text-primary);">Make *</label>
@@ -235,7 +243,7 @@
                                         style="font-family: var(--font-heading); color: var(--color-text-primary);">
                                         Preferred
                                         Date & Time</h3>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                                         <div>
                                             <label class="block text-sm font-medium mb-2"
                                                 style="color: var(--color-text-primary);">Date *</label>
