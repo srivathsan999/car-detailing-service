@@ -18,10 +18,11 @@
     <!-- Dashboard Header -->
     <header class="sticky top-0 z-50 glass border-b"
         style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-color: var(--color-border);">
-        <div class="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+        <div class="px-3 sm:px-4 lg:px-6 py-3 sm:py-4">
             <div class="flex items-center justify-between gap-2">
                 <div class="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
-                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0" id="sidebarToggle">
+                    <button class="xl:hidden p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0"
+                        id="sidebarToggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="color: var(--color-text-primary);">
@@ -49,14 +50,15 @@
                         Manager</h1>
                 </div>
                 <div class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-                    <button class="theme-toggle neomorphic" data-theme-toggle>
+                    <button class="theme-toggle neomorphic hidden xl:flex" data-theme-toggle>
                         <span data-theme-icon></span>
                     </button>
                     <div class="flex items-center space-x-2">
                         <div
                             class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                             AD</div>
-                        <span class="hidden md:block font-medium text-sm" style="color: var(--color-text-primary);">Admin</span>
+                        <span class="hidden md:block font-medium text-sm"
+                            style="color: var(--color-text-primary);">Admin</span>
                     </div>
                 </div>
             </div>
@@ -65,21 +67,22 @@
 
     <div class="flex min-h-screen overflow-x-hidden lg:items-start">
         <!-- Sidebar Overlay -->
-        <div class="fixed inset-0 bg-black/50 z-40 lg:hidden hidden" id="sidebarOverlay"></div>
+        <div class="fixed inset-0 bg-black/50 z-40 xl:hidden hidden" id="sidebarOverlay"></div>
 
         <!-- Sidebar -->
         <aside
-            class="w-64 glass border-r fixed lg:sticky lg:top-[72px] inset-y-0 left-0 z-40 lg:z-10 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block bg-white lg:bg-transparent lg:self-start"
-            id="sidebar" style="backdrop-filter: blur(20px); border-color: var(--color-border); top: 64px; height: calc(100vh - 64px);">
+            class="w-64 glass border-r fixed xl:sticky xl:top-[72px] inset-y-0 left-0 z-40 xl:z-10 transform -translate-x-full xl:translate-x-0 transition-transform duration-300 xl:block bg-white xl:bg-transparent xl:self-start"
+            id="sidebar"
+            style="backdrop-filter: blur(20px); border-color: var(--color-border); top: 64px; height: calc(100vh - 64px);">
             <style>
-                @media (min-width: 1024px) {
+                @media (min-width: 1280px) {
                     #sidebar {
                         top: 72px !important;
                         height: calc(100vh - 72px) !important;
                     }
                 }
             </style>
-            <nav class="p-4 lg:p-6 space-y-2">
+            <nav class="p-4 xl:p-6 space-y-2">
                 <a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition"
                     style="color: var(--color-text-primary);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -134,6 +137,13 @@
                         </svg>
                         <span class="font-medium">Logout</span>
                     </a>
+                
+                    <div class="flex items-center justify-between px-4 py-6 border-t mt-4 xl:hidden" style="border-color: var(--color-border);">
+                        <span class="font-medium text-sm" style="color: var(--color-text-primary);">Theme Mode</span>
+                        <button class="theme-toggle neomorphic hidden xl:flex" data-theme-toggle>
+                            <span data-theme-icon></span>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </aside>
@@ -163,7 +173,8 @@
                 </div>
 
                 <!-- Packages Grid -->
-                <div id="packagesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                <div id="packagesGrid"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                     <!-- Packages will be loaded here -->
                 </div>
 
@@ -326,33 +337,35 @@
 
                 function createPackageCard(pkg) {
                     const div = document.createElement('div');
-                    div.className = 'card glass';
+                    div.className = 'card glass flex flex-col';
                     div.dataset.packageId = pkg.id;
 
                     const featuresList = pkg.features ? pkg.features.map(f => `<li class="text-sm" style="color: var(--color-text-secondary);">${f}</li>`).join('') : '';
 
                     div.innerHTML = `
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <h3 class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">${pkg.name}</h3>
-                            ${pkg.active ? '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Active</span>' : '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Inactive</span>'}
-                        </div>
-                        <p class="text-sm mb-3" style="color: var(--color-text-secondary);">${pkg.description}</p>
-                        <div class="flex items-center space-x-4 mb-3">
-                            <div>
-                                <span class="text-xs" style="color: var(--color-text-secondary);">Price:</span>
-                                <span class="text-lg font-bold ml-1" style="color: var(--color-accent);">$${pkg.price}</span>
+                <div class="flex-1">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <h3 class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">${pkg.name}</h3>
+                                ${pkg.active ? '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Active</span>' : '<span class="px-2 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Inactive</span>'}
                             </div>
-                            <div>
-                                <span class="text-xs" style="color: var(--color-text-secondary);">Duration:</span>
-                                <span class="text-sm font-medium ml-1" style="color: var(--color-text-primary);">${pkg.duration}</span>
+                            <p class="text-sm mb-3" style="color: var(--color-text-secondary);">${pkg.description}</p>
+                            <div class="flex items-center space-x-4 mb-3">
+                                <div>
+                                    <span class="text-xs" style="color: var(--color-text-secondary);">Price:</span>
+                                    <span class="text-lg font-bold ml-1" style="color: var(--color-accent);">$${pkg.price}</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs" style="color: var(--color-text-secondary);">Duration:</span>
+                                    <span class="text-sm font-medium ml-1" style="color: var(--color-text-primary);">${pkg.duration}</span>
+                                </div>
                             </div>
+                            ${featuresList ? `<ul class="list-disc list-inside space-y-1 mb-4">${featuresList}</ul>` : ''}
                         </div>
-                        ${featuresList ? `<ul class="list-disc list-inside space-y-1 mb-4">${featuresList}</ul>` : ''}
                     </div>
                 </div>
-                <div class="flex space-x-2 pt-4 border-t" style="border-color: var(--color-border);">
+                <div class="flex space-x-2 pt-4 border-t mt-auto" style="border-color: var(--color-border);">
                     <button class="edit-package btn btn-outline flex-1 text-sm" data-id="${pkg.id}">Edit</button>
                     <button class="delete-package btn btn-outline flex-1 text-sm text-red-600 hover:bg-red-50" data-id="${pkg.id}">Delete</button>
                 </div>
@@ -489,3 +502,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+

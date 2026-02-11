@@ -39,8 +39,8 @@
                         style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                 </a>
 
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium hover:text-cyan-500 transition"
+                <div class="hidden xl:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium hover:text-cyan-500 transition nav-active"
                         style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium hover:text-cyan-500 transition"
                         style="color: var(--color-text-primary);">Home 2</a>
@@ -60,11 +60,11 @@
                     <button class="theme-toggle neomorphic" data-theme-toggle>
                         <span data-theme-icon></span>
                     </button>
-                    <a href="dashboard/index.html" class="btn btn-outline hidden lg:inline-flex">Dashboard</a>
-                    <a href="pages/auth/login.html" class="btn btn-outline hidden lg:inline-flex">Login</a>
-                    <a href="pages/auth/signup.html" class="btn btn-primary hidden lg:inline-flex">Sign Up</a>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden xl:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden xl:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden xl:inline-flex">Sign Up</a>
 
-                    <button class="lg:hidden p-2" data-mobile-menu-toggle>
+                    <button class="xl:hidden p-2" data-mobile-menu-toggle>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="color: var(--color-text-primary);">
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="hidden lg:block mt-4 pb-4" data-mobile-menu>
+            <div class="hidden xl:block mt-4 pb-4" data-mobile-menu>
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
@@ -326,6 +326,79 @@
         </div>
     </section>
 
+    <!-- Before/After Showcase -->
+    <section class="section py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4"
+                    style="font-family: var(--font-heading); color: var(--color-text-primary);">Transformation Gallery
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-secondary);">
+                    See the dramatic before and after results of our detailing work
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-0 overflow-hidden">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-0">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                    Before</div>
+                                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop"
+                                    alt="Before" class="w-full h-64 object-cover">
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                    After</div>
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop"
+                                    alt="After" class="w-full h-64 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Paint
+                                Correction & Ceramic Coating</h3>
+                            <p style="color: var(--color-text-secondary);">Complete paint restoration with 5-year
+                                ceramic protection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-0 overflow-hidden">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-0">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                    Before</div>
+                                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop"
+                                    alt="Before" class="w-full h-64 object-cover">
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                    After</div>
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop"
+                                    alt="After" class="w-full h-64 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Interior
+                                Deep Clean</h3>
+                            <p style="color: var(--color-text-secondary);">Complete interior restoration and leather
+                                conditioning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="section py-20" style="background: var(--color-surface);">
         <div class="container mx-auto px-4">
@@ -474,79 +547,6 @@
         </div>
     </section>
 
-    <!-- Before/After Showcase -->
-    <section class="section py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4"
-                    style="font-family: var(--font-heading); color: var(--color-text-primary);">Transformation Gallery
-                </h2>
-                <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-secondary);">
-                    See the dramatic before and after results of our detailing work
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card p-0 overflow-hidden">
-                    <div class="relative">
-                        <div class="grid grid-cols-2 gap-0">
-                            <div class="relative">
-                                <div
-                                    class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                                    Before</div>
-                                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop"
-                                    alt="Before" class="w-full h-64 object-cover">
-                            </div>
-                            <div class="relative">
-                                <div
-                                    class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                                    After</div>
-                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop"
-                                    alt="After" class="w-full h-64 object-cover">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2"
-                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Paint
-                                Correction & Ceramic Coating</h3>
-                            <p style="color: var(--color-text-secondary);">Complete paint restoration with 5-year
-                                ceramic protection</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card p-0 overflow-hidden">
-                    <div class="relative">
-                        <div class="grid grid-cols-2 gap-0">
-                            <div class="relative">
-                                <div
-                                    class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                                    Before</div>
-                                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop"
-                                    alt="Before" class="w-full h-64 object-cover">
-                            </div>
-                            <div class="relative">
-                                <div
-                                    class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                                    After</div>
-                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop"
-                                    alt="After" class="w-full h-64 object-cover">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2"
-                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Interior
-                                Deep Clean</h3>
-                            <p style="color: var(--color-text-secondary);">Complete interior restoration and leather
-                                conditioning</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="section py-20" style="background: var(--color-surface);">
         <div class="container mx-auto px-4">
@@ -558,7 +558,7 @@
                     Everything you need to know about our services
                 </p>
             </div>
-            <div class="max-w-3xl mx-auto space-y-4">
+            <div class="max-w-5xl mx-auto space-y-4">
                 <div class="card">
                     <button class="faq-question w-full text-left flex items-center justify-between p-4"
                         style="color: var(--color-text-primary);">
@@ -630,10 +630,12 @@
     <!-- CTA Section -->
     <section class="section py-20">
         <div class="container mx-auto px-4">
-            <div class="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-3xl p-12 text-center text-white">
-                <h2 class="text-4xl font-bold mb-4" style="font-family: var(--font-heading);">Ready to Transform Your
+            <div class="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-3xl p-12 text-center text-white shadow-xl">
+                <h2 class="text-4xl font-bold mb-4 text-white" style="font-family: var(--font-heading);">Ready to
+                    Transform Your
                     Vehicle?</h2>
-                <p class="text-xl mb-8 opacity-90">Book your appointment today and experience the AutoShine difference.
+                <p class="text-xl mb-8 text-white" style="opacity: 0.95;">Book your appointment today and experience the
+                    AutoShine difference.
                 </p>
                 <a href="contact.html" class="btn bg-white text-cyan-600 hover:bg-gray-100">Get Started Now</a>
             </div>

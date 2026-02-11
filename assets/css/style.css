@@ -11,11 +11,11 @@
     --color-surface: #F8FAFC;
     --color-border: #E2E8F0;
     --color-white: #FFFFFF;
-    
+
     /* Typography */
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -57,7 +57,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
@@ -98,13 +103,13 @@ p {
 .neomorphic {
     background: var(--color-surface);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1),
-                -8px -8px 16px rgba(255, 255, 255, 0.1);
+        -8px -8px 16px rgba(255, 255, 255, 0.1);
     border: none;
 }
 
 [data-theme="dark"] .neomorphic {
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3),
-                -8px -8px 16px rgba(255, 255, 255, 0.05);
+        -8px -8px 16px rgba(255, 255, 255, 0.05);
 }
 
 /* Buttons */
@@ -193,6 +198,24 @@ p {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Active Menu State */
+.navbar a.nav-active {
+    color: #22D3EE !important;
+    position: relative;
+}
+
+.navbar a.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0EA5E9 0%, #22D3EE 100%);
+    border-radius: 2px;
+}
+
+
 /* Mobile Menu */
 [data-mobile-menu] {
     max-height: 0;
@@ -242,7 +265,7 @@ p {
         background: var(--color-white);
         border-bottom: 1px solid var(--color-border);
     }
-    
+
     [data-theme="dark"] .navbar {
         background: var(--color-primary);
         border-bottom-color: var(--color-border);
@@ -347,11 +370,11 @@ p {
     .section {
         padding: 2rem 0;
     }
-    
+
     h1 {
         font-size: 32px;
     }
-    
+
     h2 {
         font-size: 24px;
     }
@@ -363,6 +386,7 @@ p {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -372,4 +396,3 @@ p {
 .fade-in {
     animation: fadeIn 0.6s ease-out;
 }
-

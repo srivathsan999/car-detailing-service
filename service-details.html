@@ -21,7 +21,7 @@
                     </div>
                     <span class="text-xl font-bold" style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
                 </a>
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden xl:flex items-center space-x-8">
                     <a href="index.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Home 2</a>
                     <a href="services.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Services</a>
@@ -31,14 +31,14 @@
                     <a href="contact.html" class="font-medium hover:text-cyan-500 transition" style="color: var(--color-text-primary);">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button class="theme-toggle neomorphic" data-theme-toggle><span data-theme-icon></span></button>
-                    <a href="dashboard/index.html" class="btn btn-outline hidden lg:inline-flex">Dashboard</a>
-                    <a href="pages/auth/login.html" class="btn btn-outline hidden lg:inline-flex">Login</a>
-                    <a href="pages/auth/signup.html" class="btn btn-primary hidden lg:inline-flex">Sign Up</a>
-                    <button class="lg:hidden p-2" data-mobile-menu-toggle><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+                    <button class="theme-toggle neomorphic hidden xl:flex" data-theme-toggle><span data-theme-icon></span></button>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden xl:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden xl:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden xl:inline-flex">Sign Up</a>
+                    <button class="xl:hidden p-2" data-mobile-menu-toggle><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-primary);"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
                 </div>
             </div>
-            <div class="hidden lg:block mt-4 pb-4" data-mobile-menu>
+            <div class="hidden xl:block mt-4 pb-4" data-mobile-menu>
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
                     <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
@@ -50,6 +50,13 @@
                     <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
                     <a href="pages/auth/login.html" class="btn btn-outline">Login</a>
                     <a href="pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
+                
+                    <div class="flex items-center justify-between px-4 py-8 border-t mt-4" style="border-color: var(--color-border);">
+                        <span class="font-medium text-sm" style="color: var(--color-text-primary);">Theme Mode</span>
+                        <button class="theme-toggle neomorphic" data-theme-toggle>
+                            <span data-theme-icon></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,4 +144,11 @@
     <script src="assets/js/navbar.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 

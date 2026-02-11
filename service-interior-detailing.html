@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Detailing - AutoShine Car Detailing</title>
+    <meta name="description"
+        content="Professional interior car detailing service. Deep cleaning, leather conditioning, odor elimination, and more.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body style="background: var(--color-surface);">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold"
+                        style="font-family: var(--font-heading); color: var(--color-text-primary);">AutoShine</span>
+                </a>
+                <div class="hidden xl:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Home</a>
+                    <a href="home-2.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Home 2</a>
+                    <a href="services.html" class="font-medium hover:text-cyan-500 transition nav-active"
+                        style="color: var(--color-text-primary);">Services</a>
+                    <a href="pricing.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Pricing</a>
+                    <a href="gallery.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Gallery</a>
+                    <a href="blog.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-cyan-500 transition"
+                        style="color: var(--color-text-primary);">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="theme-toggle neomorphic hidden xl:flex" data-theme-toggle><span data-theme-icon></span></button>
+                    <a href="dashboard/index.html" class="btn btn-outline hidden xl:inline-flex">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline hidden xl:inline-flex">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary hidden xl:inline-flex">Sign Up</a>
+                    <button class="xl:hidden p-2" data-mobile-menu-toggle>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--color-text-primary);">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden xl:block mt-4 pb-4" data-mobile-menu>
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium" style="color: var(--color-text-primary);">Home</a>
+                    <a href="home-2.html" class="font-medium" style="color: var(--color-text-primary);">Home 2</a>
+                    <a href="services.html" class="font-medium" style="color: var(--color-text-primary);">Services</a>
+                    <a href="pricing.html" class="font-medium" style="color: var(--color-text-primary);">Pricing</a>
+                    <a href="gallery.html" class="font-medium" style="color: var(--color-text-primary);">Gallery</a>
+                    <a href="blog.html" class="font-medium" style="color: var(--color-text-primary);">Blog</a>
+                    <a href="contact.html" class="font-medium" style="color: var(--color-text-primary);">Contact</a>
+                    <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+                    <a href="pages/auth/login.html" class="btn btn-outline">Login</a>
+                    <a href="pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
+                
+                    <div class="flex items-center justify-between px-4 py-8 border-t mt-4" style="border-color: var(--color-border);">
+                        <span class="font-medium text-sm" style="color: var(--color-text-primary);">Theme Mode</span>
+                        <button class="theme-toggle neomorphic" data-theme-toggle>
+                            <span data-theme-icon></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-4">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-8">
+                <a href="services.html"
+                    class="inline-flex items-center text-cyan-500 hover:text-cyan-600 mb-4 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mr-2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Back to Services
+                </a>
+                <h1 class="text-5xl font-bold mb-6"
+                    style="font-family: var(--font-heading); color: var(--color-text-primary);">Interior Detailing</h1>
+                <p class="text-xl mb-8" style="color: var(--color-text-secondary);">Deep cleaning and conditioning of
+                    all interior surfaces to create a fresh, pristine cabin environment.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="btn btn-primary text-lg px-8 py-4">Book This Service</a>
+                    <a href="pricing.html" class="btn btn-outline text-lg px-8 py-4">View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Image -->
+    <section class="pb-12 px-4">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto">
+                <img src="assets/images/interior-detailing.png" alt="Interior Detailing Service"
+                    class="w-full rounded-3xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2 space-y-12">
+                        <!-- Overview -->
+                        <div class="card">
+                            <h2 class="text-3xl font-bold mb-6"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Service
+                                Overview</h2>
+                            <p class="text-lg mb-4" style="color: var(--color-text-secondary);">Our Interior Detailing
+                                service transforms your vehicle's cabin into a clean, fresh, and inviting space. We
+                                meticulously clean every surface, from the dashboard to the carpets, ensuring a thorough
+                                and professional result.</p>
+                            <p class="text-lg" style="color: var(--color-text-secondary);">Using specialized equipment
+                                and premium products, we remove dirt, stains, and odors while protecting and
+                                conditioning all interior materials.</p>
+                        </div>
+
+                        <!-- What's Included -->
+                        <div class="card">
+                            <h2 class="text-3xl font-bold mb-6"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">What's
+                                Included</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Vacuum
+                                            & Steam Cleaning</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Deep vacuum and
+                                            steam clean all surfaces</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Leather
+                                            Conditioning</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Clean and
+                                            condition leather seats</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">
+                                            Dashboard & Console</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Detailed cleaning
+                                            of all hard surfaces</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Window
+                                            Cleaning</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Streak-free
+                                            interior glass cleaning</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Odor
+                                            Elimination</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Remove unwanted
+                                            smells and freshen air</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-1 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Carpet
+                                            & Upholstery</h3>
+                                        <p class="text-sm" style="color: var(--color-text-secondary);">Deep clean and
+                                            stain removal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Process -->
+                        <div class="card">
+                            <h2 class="text-3xl font-bold mb-6"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Our Process
+                            </h2>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        1</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Initial Assessment</h3>
+                                        <p style="color: var(--color-text-secondary);">Inspect interior condition and
+                                            identify problem areas requiring special attention.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        2</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Remove Debris</h3>
+                                        <p style="color: var(--color-text-secondary);">Remove all loose items, trash,
+                                            and debris from the interior.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        3</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Deep Vacuum</h3>
+                                        <p style="color: var(--color-text-secondary);">Thoroughly vacuum all carpets,
+                                            seats, and hard-to-reach areas.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        4</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Steam Clean & Shampoo</h3>
+                                        <p style="color: var(--color-text-secondary);">Steam clean and shampoo carpets,
+                                            seats, and upholstery.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        5</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Surface Cleaning</h3>
+                                        <p style="color: var(--color-text-secondary);">Clean and protect dashboard,
+                                            console, door panels, and all hard surfaces.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                        6</div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2"
+                                            style="color: var(--color-text-primary);">Final Details</h3>
+                                        <p style="color: var(--color-text-secondary);">Clean windows, apply protectant,
+                                            and eliminate odors for a fresh finish.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-6">
+                        <!-- Pricing Card -->
+                        <div class="card sticky top-24">
+                            <h3 class="text-2xl font-bold mb-4"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Service
+                                Details</h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center justify-between pb-3 border-b"
+                                    style="border-color: var(--color-border);">
+                                    <span style="color: var(--color-text-secondary);">Duration</span>
+                                    <span class="font-semibold" style="color: var(--color-text-primary);">3-4
+                                        hours</span>
+                                </div>
+                                <div class="flex items-center justify-between pb-3 border-b"
+                                    style="border-color: var(--color-border);">
+                                    <span style="color: var(--color-text-secondary);">Starting Price</span>
+                                    <span class="font-semibold text-2xl text-cyan-500">$179</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span style="color: var(--color-text-secondary);">Warranty</span>
+                                    <span class="font-semibold" style="color: var(--color-text-primary);">30 days</span>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary w-full mb-3">Book Now</a>
+                            <a href="pricing.html" class="btn btn-outline w-full">View All Pricing</a>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div class="card">
+                            <h3 class="text-xl font-bold mb-4"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Benefits
+                            </h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-0.5 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span style="color: var(--color-text-secondary);">Fresh, clean cabin</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-0.5 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span style="color: var(--color-text-secondary);">Removes allergens &
+                                        bacteria</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-0.5 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span style="color: var(--color-text-secondary);">Protects interior materials</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-0.5 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span style="color: var(--color-text-secondary);">Eliminates odors</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mt-0.5 flex-shrink-0">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span style="color: var(--color-text-secondary);">Improves resale value</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Related Services -->
+                        <div class="card">
+                            <h3 class="text-xl font-bold mb-4"
+                                style="font-family: var(--font-heading); color: var(--color-text-primary);">Related
+                                Services</h3>
+                            <ul class="space-y-2">
+                                <li><a href="service-exterior-detailing.html"
+                                        class="text-cyan-500 hover:text-cyan-600 transition">Exterior Detailing</a></li>
+                                <li><a href="service-full-service.html"
+                                        class="text-cyan-500 hover:text-cyan-600 transition">Full Service Package</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section py-20 px-4">
+        <div class="container mx-auto">
+            <div class="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-3xl p-12 text-center text-white shadow-xl">
+                <h2 class="text-4xl font-bold mb-4 text-white" style="font-family: var(--font-heading);">Ready for a
+                    Fresh, Clean Interior?</h2>
+                <p class="text-xl mb-8 text-white" style="opacity: 0.95;">Book your Interior Detailing service today and
+                    enjoy a pristine cabin.</p>
+                <a href="contact.html" class="btn bg-white text-cyan-600 hover:bg-gray-100">Book This Service Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20" style="background: var(--color-primary);">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M5 12h14M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM19 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold" style="font-family: var(--font-heading); color: #FFFFFF;">
+                            AutoShine</h3>
+                    </div>
+                    <p class="text-sm mb-4" style="color: rgba(255, 255, 255, 0.7);">Professional car detailing services
+                        with premium quality.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="font-family: var(--font-heading); color: #FFFFFF;">
+                        Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Home</a></li>
+                        <li><a href="services.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="font-family: var(--font-heading); color: #FFFFFF;">
+                        Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="service-exterior-detailing.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Exterior Detailing</a></li>
+                        <li><a href="service-interior-detailing.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Interior Detailing</a></li>
+                        <li><a href="service-ceramic-coating.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Ceramic Coating</a></li>
+                        <li><a href="service-paint-correction.html" class="hover:text-cyan-400 transition"
+                                style="color: rgba(255, 255, 255, 0.7);">Paint Correction</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="font-family: var(--font-heading); color: #FFFFFF;">
+                        Contact</h4>
+                    <ul class="space-y-2" style="color: rgba(255, 255, 255, 0.7);">
+                        <li>123 Car Street, Auto City</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@autoshine.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center" style="border-color: rgba(255, 255, 255, 0.1);">
+                <p style="color: rgba(255, 255, 255, 0.7);">&copy; 2026 AutoShine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
