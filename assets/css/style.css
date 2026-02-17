@@ -199,9 +199,11 @@ p {
 }
 
 /* Active Menu State */
-.navbar a.nav-active {
+.navbar a.nav-active,
+[data-mobile-menu] a.nav-active {
     color: #22D3EE !important;
     position: relative;
+    font-weight: 600;
 }
 
 .navbar a.nav-active::after {
@@ -213,6 +215,18 @@ p {
     height: 2px;
     background: linear-gradient(90deg, #0EA5E9 0%, #22D3EE 100%);
     border-radius: 2px;
+}
+
+[data-mobile-menu] a.nav-active::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: linear-gradient(180deg, #0EA5E9 0%, #22D3EE 100%);
+    border-radius: 0 4px 4px 0;
 }
 
 
